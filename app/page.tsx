@@ -1,69 +1,74 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="relative isolate flex min-h-dvh overflow-hidden bg-[#0a0a0a] text-white">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,black,transparent_80%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#10b981]/10 blur-[140px]"
+      />
+
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col px-5 sm:px-8 lg:px-12">
+        <header className="animate-reveal flex h-20 items-center justify-between border-b border-white/10 sm:h-24">
+          <a
+            href="#home"
+            className="group flex items-center gap-3 text-sm font-semibold tracking-[-0.02em]"
+            aria-label="Constructor home"
+          >
+            <span className="size-2 bg-[#10b981] shadow-[0_0_18px_rgba(16,185,129,0.7)] transition-transform duration-300 group-hover:rotate-45" />
+            CONSTRUCTOR
+          </a>
+          <div className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b7280]">
+            <span className="hidden sm:inline">Independent studio</span>
+            <span className="h-px w-6 bg-white/20" />
+            <span className="text-[#10b981]">Available</span>
+          </div>
+        </header>
+
+        <section
+          id="home"
+          className="flex flex-1 flex-col items-center justify-center py-20 text-center sm:py-24 lg:py-28"
+        >
+          <div className="animate-reveal [animation-delay:100ms]">
+            <p className="mb-7 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#10b981] sm:mb-9 sm:text-xs">
+              Design · Build · Ship
+            </p>
+          </div>
+
+          <h1 className="animate-reveal max-w-6xl text-balance text-[clamp(3.5rem,10vw,9rem)] font-semibold leading-[0.86] tracking-[-0.075em] [animation-delay:180ms]">
+            Hello from
+            <span className="block text-[#10b981]">Constructor.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="animate-reveal mt-8 max-w-xl text-pretty text-base leading-7 text-[#9ca3af] [animation-delay:280ms] sm:mt-10 sm:text-lg sm:leading-8">
+            Built with Codex and Azure. Crafted for ambitious ideas that deserve
+            a precise, beautifully simple digital home.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+          <div className="animate-reveal mt-10 [animation-delay:380ms] sm:mt-12">
+            <a
+              href="mailto:hello@constructor.dev"
+              className="group inline-flex h-14 items-center gap-8 bg-[#10b981] px-7 text-sm font-semibold text-[#0a0a0a] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-[#059669] hover:shadow-[0_16px_40px_rgba(16,185,129,0.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#10b981] sm:h-16 sm:px-8 sm:text-base"
+            >
+              Start a project
+              <span
+                aria-hidden="true"
+                className="text-xl transition-transform duration-300 group-hover:translate-x-1"
+              >
+                ↗
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <footer className="animate-reveal flex h-20 items-center justify-between border-t border-white/10 text-[10px] font-medium uppercase tracking-[0.18em] text-[#6b7280] [animation-delay:480ms] sm:text-[11px]">
+          <span>Digital experiences</span>
+          <span className="hidden sm:inline">Built to make an impact</span>
+          <span>© 2026</span>
+        </footer>
+      </div>
+    </main>
   );
 }
